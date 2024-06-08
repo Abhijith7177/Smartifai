@@ -170,7 +170,7 @@ const Dashboard = () => {
           </Col>
         </Row>
       </div>
-      <Content className="content">
+      <Content className="">
         {loading ? ( // Render loader if loading state is true
           <div style={{ textAlign: "center", padding: "20px" }}>
             <Loader />
