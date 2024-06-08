@@ -23,17 +23,18 @@ const Sidebar: React.FC<SidebarProps> = ({ small }) => {
       style={{
         backgroundColor: "#755AAE",
         height: small ? "100%" : "auto",
-        borderTopRightRadius: "5px",
+        borderTopRightRadius: "30px",
       }}>
       <div style={{ textAlign: "center", padding: "20px 0" }}>
-        <div
+        <h1
           style={{
             width: "100%",
             maxWidth: small ? "100%" : 200,
             marginBottom: 20,
+            color: "white",
           }}>
           PLATFORM
-        </div>
+        </h1>
       </div>
       <Menu
         mode="inline"
@@ -46,11 +47,14 @@ const Sidebar: React.FC<SidebarProps> = ({ small }) => {
         <Menu.Item key="/" icon={<HomeOutlined />}>
           <Link to="/">Dashboard</Link>
         </Menu.Item>
-        <Menu.Item key="/settings" icon={<SettingOutlined />}>
-          <Link to="/settings">Settings</Link>
+        <Menu.Item key="/connect" icon={<SettingOutlined />}>
+          Connect
         </Menu.Item>
-        <Menu.Item key="/integration" icon={<InteractionOutlined />}>
-          <Link to="/integration">Integration</Link>
+        <Menu.Item key="/report" icon={<InteractionOutlined />}>
+          Report
+        </Menu.Item>
+        <Menu.Item key="/settings" icon={<InteractionOutlined />}>
+          Settings
         </Menu.Item>
       </Menu>
     </Sider>

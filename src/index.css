@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f3e3e8;
 }
 
 code {
@@ -29,10 +30,10 @@ button.ant-btn.css-dev-only-do-not-override-txh9fw.ant-btn-primary {
 /* newwww */
 
 .app-header {
-  background: #7f4ecb; /* Purple background */
+  background: #755aae;
   color: #fff; /* White text color */
   padding: 0 16px;
-  border-radius: 16px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   margin-inline: 100px;
@@ -232,4 +233,29 @@ div.ant-layout.css-dev-only-do-not-override-3rel02 {
     grid-column: span 1;
     grid-row: span 1;
   }
+}
+
+.expand-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:where(.css-dev-only-do-not-override-3rel02).ant-menu-light:not(
+    .ant-menu-horizontal
+  )
+  .ant-menu-item:not(.ant-menu-item-selected):active,
+:where(.css-dev-only-do-not-override-3rel02).ant-menu .ant-menu-item a::before {
+  color: #efa797 !important;
+  background-color: transparent !important;
+}
+
+.ant-menu-item-active.ant-menu-item-selected,
+.ant-menu-item.ant-menu-item-selected {
+  color: #efa797 !important;
+  background-color: transparent;
+}
+
+.ant-menu-item {
+  color: white !important;
 }
