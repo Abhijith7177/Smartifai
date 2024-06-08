@@ -215,11 +215,13 @@ div.ant-layout.css-dev-only-do-not-override-3rel02 {
 
   .metric-card.fixed-span {
     grid-column: span 3;
+    justify-self: center;
   }
 
   .metric-card.expanded {
     grid-column: span 3;
     grid-row: span 2;
+    justify-self: center;
   }
 }
 
@@ -232,6 +234,21 @@ div.ant-layout.css-dev-only-do-not-override-3rel02 {
   .metric-card.expanded {
     grid-column: span 1;
     grid-row: span 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .metrics-container {
+    justify-content: center;
+  }
+  .metrics-container > * {
+    justify-self: center;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .metrics-container > * {
+    width: 80%;
   }
 }
 
@@ -258,4 +275,39 @@ div.ant-layout.css-dev-only-do-not-override-3rel02 {
 
 .ant-menu-item {
   color: white !important;
+}
+
+.size-16 {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    height: 200px;
+    margin-inline: 30px;
+  }
+}
+@media (max-width: 768px) {
+}
+
+@media (max-width: 830px) {
+  .top-bar-wrapper {
+    flex-direction: column;
+  }
+
+  .top-bar-wrapper .ant-col {
+    width: 50% !important;
+  }
+}
+
+:where(.css-dev-only-do-not-override-3rel02).ant-btn-primary {
+  background-color: #755aae;
+}
+
+.anticon.anticon-calendar {
+  color: white;
+  display: none;
+}
+
+.ant-picker-input input[placeholder="Start date"] {
 }

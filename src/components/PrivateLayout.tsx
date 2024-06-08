@@ -66,12 +66,16 @@ const PrivateLayout: React.FC<IRouterParams> = ({ children }) => {
           }}>
           <Badge>
             <BellOutlined
-              style={{ fontSize: 20, marginRight: 20, color: "#1890ff" }}
+              style={{ fontSize: 20, marginRight: 20, color: "black" }}
             />
           </Badge>
           <Avatar
             src="path_to_your_image"
-            style={{ backgroundColor: "#87d068", verticalAlign: "middle" }}
+            style={{
+              backgroundColor: "transparent",
+              verticalAlign: "middle",
+              borderColor: " #efa797",
+            }}
             size="small"
           />
         </div>

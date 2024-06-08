@@ -130,7 +130,9 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{ display: "flex", justifyContent: "space-between" }}
+        className="top-bar-wrapper">
         <Header className="header">
           <Tabs defaultActiveKey="1" onChange={handleTabChange}>
             <TabPane tab="Overall" key="1" />
@@ -144,7 +146,7 @@ const Dashboard = () => {
           align="middle"
           className="top-bar"
           style={{ flexDirection: "column", gap: "20px", marginTop: "10px" }}>
-          <Col>
+          <Col style={{ width: "100%" }}>
             <DatePicker.RangePicker
               style={{
                 width: "100%",
@@ -155,7 +157,13 @@ const Dashboard = () => {
           </Col>
           <Col style={{ width: "100%" }}>
             <Dropdown overlay={menu} trigger={["click"]}>
-              <Button style={{ width: "100%", borderRadius: "20px" }}>
+              <Button
+                style={{
+                  width: "100%",
+                  borderRadius: "20px",
+                  borderColor: "#755AAE",
+                  color: "#755AAE",
+                }}>
                 Select Account <DownOutlined />
               </Button>
             </Dropdown>
@@ -185,7 +193,7 @@ const Dashboard = () => {
                     {<EyeOutlined className="icon" />}
                     <div className={expandedCard === index ? "expand-1" : ""}>
                       <h4>{card.title}</h4>
-                      <h1>{card.value}</h1>
+                      <h1 style={{ color: "#755AAE" }}>{card.value}</h1>
                       {expandedCard === index && (
                         <Dropdown overlay={menu1} trigger={["click"]}>
                           <Button style={{ borderRadius: "20px" }}>
@@ -248,10 +256,8 @@ const Dashboard = () => {
                 <h4 style={{ display: "flex" }}>Top Categories</h4>
 
                 <Carousel autoplay>
-                  {/* Map over barChartData to render each bar chart */}
                   {barChartData.map((chart, index) => (
                     <div key={index}>
-                      {/* Render a bar chart for each set of data */}
                       <ReactApexChart
                         options={{
                           chart: {

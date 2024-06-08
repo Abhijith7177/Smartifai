@@ -62,7 +62,8 @@ const AppHeader: React.FC = () => {
         {data[dataType].map((item, index) => (
           <Col key={index}>
             <Text className="header-text" style={{ color: item.color }}>
-              {item.label} <Text className="header-text">{item.value}</Text>
+              {item.label}{" "}
+              <Text className="header-text size-16">{item.value}</Text>
             </Text>
           </Col>
         ))}
